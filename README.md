@@ -1,17 +1,17 @@
 # TaskFlow ✦ — Advanced Task Manager
 
-A premium React Task Manager app built as an assignment submission. Features drag-and-drop, dark/light theming, animated transitions, Context API, custom hooks, and full local storage persistence.
+A premium React Task Manager app with drag-and-drop, dark/light theming, animated transitions, Context API, custom hooks, and full local storage persistence.
 
-## 🚀 Live Features
+## 🚀 Features
 
-### Basic Features
+### Core Functionality
 - ✅ **Add tasks** — type and press Enter or click + Add Task
 - ✅ **Mark tasks as completed** — checkbox with strikethrough animation
 - ✅ **Delete tasks** — trash button with fade-out collapse animation
 - ✅ **Filter tasks** — All / Pending / Completed with live count badges
 - ✅ **Local Storage persistence** — tasks and theme survive page refresh
 
-### React Challenges
+### React Architecture
 - ✅ **Custom Hook `useLocalStorage`** — handles all read/write to localStorage with error handling and cross-tab sync
 - ✅ **Custom Hook `useTheme`** — persists dark/light mode preference
 - ✅ **Context API** — `TaskContext` provides all state and actions; zero prop drilling
@@ -20,7 +20,7 @@ A premium React Task Manager app built as an assignment submission. Features dra
 - ✅ **`useMemo`** — filtered task list, counts, completion rate, context value object
 - ✅ **Form Validation** — prevents empty tasks, enforces min 3 chars, shows animated inline error
 
-### CSS Challenges
+### UI & Design
 - ✅ **Dark / Light Mode** — CSS custom properties toggled via `data-theme` on `<html>`, persisted in localStorage
 - ✅ **Animations** — `slideInDown` on add, `fadeOutCollapse` on delete, `shake` on error, `floatIcon` on empty state
 - ✅ **Responsive Design** — mobile-first layout with `clamp()` font sizes, flex-wrap, stacked input on small screens
