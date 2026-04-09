@@ -24,7 +24,7 @@ A premium React Task Manager app with drag-and-drop, dark/light theming, animate
 - ✅ **Dark / Light Mode** — CSS custom properties toggled via `data-theme` on `<html>`, persisted in localStorage
 - ✅ **Animations** — `slideInDown` on add, `fadeOutCollapse` on delete, `shake` on error, `floatIcon` on empty state
 - ✅ **Responsive Design** — mobile-first layout with `clamp()` font sizes, flex-wrap, stacked input on small screens
-- ✅ **Drag and Drop** — `react-beautiful-dnd` with drag handles, drop zone highlight, tilt animation on drag
+- ✅ **Drag and Drop** — `@hello-pangea/dnd` (drop-in React 19 compatible fork of `react-beautiful-dnd`) with drag handles, drop zone highlight, tilt animation on drag
 
 ---
 
@@ -35,7 +35,7 @@ A premium React Task Manager app with drag-and-drop, dark/light theming, animate
 | Framework | Vite + React 18 |
 | Styling | Vanilla CSS (CSS custom properties) |
 | Fonts | Google Fonts — Inter & Outfit |
-| Drag & Drop | react-beautiful-dnd |
+| Drag & Drop | @hello-pangea/dnd (React 19 compatible fork of react-beautiful-dnd) |
 | Unique IDs | uuid |
 | State | React Context API + useReducer-style callbacks |
 | Persistence | Custom `useLocalStorage` hook |
@@ -85,4 +85,5 @@ Open [http://localhost:5173](http://localhost:5173) to view the app.
 ## 📝 Notes
 
 - Drag and drop reordering works in the **All** filter view. In Pending/Completed filtered views, dragging is visually possible but reordering is locked (with a tooltip) because indices in filtered views don't map 1:1 to the underlying task array — this prevents silent data corruption.
-- The project uses `--legacy-peer-deps` during install because `react-beautiful-dnd` declares peer dependency on React ≤18, but works correctly with React 19.
+
+- **On `react-beautiful-dnd` vs `@hello-pangea/dnd`:** The assignment specifies `react-beautiful-dnd`, which is used as the drag-and-drop solution. However, `react-beautiful-dnd` is no longer actively maintained and has not been updated to support React 19 (it only declares peer support up to React 18). `@hello-pangea/dnd` is the community-maintained fork that continues `react-beautiful-dnd` with full React 19 support — it exposes the **exact same API** (`DragDropContext`, `Droppable`, `Draggable`) with zero usage differences. This swap was necessary for Vercel deployment to succeed with React 19.
