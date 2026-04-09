@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext } from '@hello-pangea/dnd';
 import { TaskProvider, useTaskContext } from './context/TaskContext';
 import TaskInput from './components/TaskInput';
 import FilterBar from './components/FilterBar';

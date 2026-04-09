@@ -1,5 +1,5 @@
 import { memo, useState, useCallback } from 'react';
-import { Draggable } from 'react-beautiful-dnd';
+import { Draggable } from '@hello-pangea/dnd';
 import { useTaskContext } from '../context/TaskContext';
 
 const TrashIcon = () => (
